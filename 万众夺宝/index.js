@@ -34,7 +34,6 @@ mui.plusReady(function(){
 	setTimeout(function () { plus.webview.show('home.html'); }, 10)
 	
 	mui('nav.bar-tab').on('tap', '.tab-item', function() {
-		console.log(app.stored.length);
 		$('nav.bar-tab .tab-item').removeClass("active");
 		$(this).addClass("active");
 		//app.load({'url' : 'html/' + this.getAttribute('data-url')});
