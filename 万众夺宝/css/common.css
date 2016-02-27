@@ -1,0 +1,69 @@
+/*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
+html{font-family:sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}body{margin:0}article,aside,details,figcaption,figure,footer,header,hgroup,main,menu,nav,section,summary{display:block}audio,canvas,progress,video{display:inline-block;vertical-align:baseline}audio:not([controls]){display:none;height:0}[hidden],template{display:none}a{background-color:transparent}a:active,a:hover{outline:0}abbr[title]{border-bottom:1px dotted}b,strong{font-weight:700}dfn{font-style:italic}h1{font-size:2em;margin:.67em 0}mark{background:#ff0;color:#000}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sup{top:-.5em}sub{bottom:-.25em}img{border:0}svg:not(:root){overflow:hidden}figure{margin:1em 40px}hr{box-sizing:content-box;height:0}pre{overflow:auto}code,kbd,pre,samp{font-family:monospace,monospace;font-size:1em}button,input,optgroup,select,textarea{color:inherit;font:inherit;margin:0}button{overflow:visible}button,select{text-transform:none}button,html input[type=button],input[type=reset],input[type=submit]{-webkit-appearance:button;cursor:pointer}button[disabled],html input[disabled]{cursor:default}button::-moz-focus-inner,input::-moz-focus-inner{border:0;padding:0}input{line-height:normal}input[type=checkbox],input[type=radio]{box-sizing:border-box;padding:0}input[type=number]::-webkit-inner-spin-button,input[type=number]::-webkit-outer-spin-button{height:auto}input[type=search]{-webkit-appearance:textfield;box-sizing:content-box}input[type=search]::-webkit-search-cancel-button,input[type=search]::-webkit-search-decoration{-webkit-appearance:none}fieldset{border:1px solid silver;margin:0 2px;padding:.35em .625em .75em}legend{border:0;padding:0}textarea{overflow:auto}optgroup{font-weight:700}table{border-collapse:collapse;border-spacing:0}td,th{padding:0}
+
+/********************************自定义 开始********************************/
+body {font-family: 'Helvetica Neue', Helvetica, sans-serif;font-size: 15px;line-height: 21px;color: #000;background-color: #F7F7F8;margin: 0;padding: 0;}
+* {-webkit-box-sizing: border-box;box-sizing: border-box;-webkit-user-select: none;outline: 0;-webkit-tap-highlight-color: transparent;-webkit-tap-highlight-color: transparent;}
+
+.bdr { border: 1px solid #CCCCCC; }
+.no-bdr { border: none; }
+.no-bdr-h { border-left: none; border-right: none; }
+.no-bdr-v { border-top: none; border-right: none; }
+.rds { border-radius: 5px; }
+.no-rds { border-radius: 0; }
+.mgn { margin: 5px; }
+.no-mgn { margin: 0; }
+.no-mgn-h { margin-left: 0; margin-right: 0; }
+.no-mgn-v { margin-top: 0; margin-right: 0; }
+.pad { padding: 5px; }
+.no-pad { padding: 0; }
+.no-pad-h { padding-left: 0; padding-right: 0; }
+.no-pad-v { padding-top: 0; padding-bottom: 0; }
+
+/********************************顶部 开始********************************/
+header.mui-bar-nav {
+	color: #fff;
+	background-color: #E20328;
+	padding-top: 0;
+	padding-bottom: 0;
+	line-height: 45px;
+}
+header a,
+header a:hover,
+header a:focus,
+header a:active,
+header a:visited {
+	color: #fff;
+	display: inline-block;
+}
+header a>img {
+	width: 20px;
+	height: 20px;
+	margin-bottom: -5px;
+}
+header.mui-bar-nav>.mui-pull-left {
+	position: absolute;
+	left: 0;
+	z-index: 5;
+}
+header.mui-bar-nav>.mui-pull-right {
+	position: absolute;
+	right: 0;
+	z-index: 5;
+}
+/********************************顶部 结束********************************/
+
+/********************************底部 开始********************************/
+nav.bar-tab {
+	/*background-color: #b61d1d;*/
+	border-top: 1px solid #F0EFF4;
+}
+.bar-tab{position: fixed;left: 0;bottom: 0;display: table;width: 100%;height: 45px;padding: 0;table-layout: fixed;background-color: #FFFFFF;box-shadow: 0 0 1px #EFEFF4;}
+.bar-tab .tab-item {display: table-cell;overflow: hidden;width: 1%;height: 45px;text-align: center;vertical-align: middle;white-space: nowrap;text-overflow: ellipsis;color: #bfbfbf;padding-top: 4px;line-height: 18px;}
+.tab-label{display: block;font-size: 12px;padding-left: 2px;}
+.bar-tab .active{color: #E5032E;}
+/********************************底部 结束********************************/
+
+/********************************商品详细 开始********************************/
+
+/********************************商品详细 结束********************************/
