@@ -1,4 +1,4 @@
-var app = window.lirlu = {};
+var app = window.app = window.lirlu = {};
 app.esced = new Date();
 app.stored = [];
 app.link = {
@@ -17,7 +17,7 @@ app.isNetwordReady = function () {
  */
 app.error = function (text) {
 	plus.nativeUI.toast(text, {'duration':'long'});
-}
+};
 /**
  * 获取当前地址
  * @param {Function} 回调方法，如果获取失败会返回一个默认的地址
@@ -40,6 +40,15 @@ app.locate = function (cb) {
 }
 app.exists = function () {
 	
+};
+/**
+ * 取得ArtTemplate并填充数据再把数据放于直接dom下。已做try catch处理
+ * @param {Object} 用于放置构造出来的tpl代码的容器，可是jquery对象也可以是jquery的选择表达式
+ * @return {String} 模板ID
+ * @return {Object} 数据
+ */
+app.tpl = function (dom, tpl, data) {
+	try { $(dom).html(template(tpl, data)); } catch (e) {};
 };
 app.api = function (link) {
 	return app.link.server_url + link;
