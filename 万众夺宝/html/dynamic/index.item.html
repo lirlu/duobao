@@ -27,9 +27,13 @@
         	border: 1px solid #000000;
         }
         .pPic { padding: 0; }
+        
+        .mui-slider {
+        	margin-bottom: 5px;
+        }
 		.mui-slider img {
 			width: auto;
-			height: 180px !important;
+			height: 200px !important;
 		}
     </style>
 
@@ -50,7 +54,7 @@
         </div>
         <script type="text/template" id="Goodtems">
             <!-- 导航 -->
-            <div class="pNav" id="divPeriod">
+            <div class="pNav mui-hidden" id="divPeriod">
             <ul class="slides">
             {{each periods(shop.qishu,shop.zongqishu) as vlaue i}} {{if vlaue==shop.qishu}}
             <li class="cur" data-qishu="{{vlaue}}"><a>第{{vlaue}}期</a><b></b></li>
@@ -61,7 +65,7 @@
             </div>
             <!-- 产品图 -->
 		    <div class="mui-slider">
-		        <div class="mui-slider-group mui-slider-loop mui-row">
+		        <div class="mui-slider-group mui-slider-loop">
 			        <!--支持循环，需要重复图片节点-->
 			        <div class="mui-slider-item mui-slider-item-duplicate">
 			        	<a href="#"><img src="{{shop.picarr[shop.picarr.length - 1]}}" /></a>
