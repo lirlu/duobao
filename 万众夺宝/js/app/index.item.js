@@ -105,6 +105,9 @@ function Item(res) {
     //console.log(html);
     $("#sliderBox").off();
     $("#divPeriod").off();
+    mui('.mui-slider').slider({ interval:5000 });
+    mui('.mui-slider').slider('refresh');
+    
     $("#sliderBox").picslider(); //商品详情图片滚动
     $("#divPeriod").touchslider(); //顶部导航滚动
     term(res.shangqihuojiang.sid); //绑定期数跳转事件

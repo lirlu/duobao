@@ -23,6 +23,14 @@
         .pNav ul.slides li:first-child b {
             border: 0;
         }
+        .bdr {
+        	border: 1px solid #000000;
+        }
+        .pPic { padding: 0; }
+		.mui-slider img {
+			width: auto;
+			height: 180px !important;
+		}
     </style>
 
     <body>
@@ -52,19 +60,23 @@
             </ul>
             </div>
             <!-- 产品图 -->
-            <div class="pPic pPicBor">
-            <div class="pPic2">
-            <div class="pImg" id="sliderBox">
-            <div class="flex-viewport">
-            <ul class="slides">
-            {{each shop.picarr as sp index}}
-            <li><img src="{{sp}}"></li>
-            {{/each}}
-            </ul>
-            </div>
-            </div>
-            </div>
-            </div>
+		    <div class="mui-slider">
+		        <div class="mui-slider-group mui-slider-loop mui-row">
+			        <!--支持循环，需要重复图片节点-->
+			        <div class="mui-slider-item mui-slider-item-duplicate">
+			        	<a href="#"><img src="{{shop.picarr[shop.picarr.length - 1]}}" /></a>
+			        </div>
+					{{each shop.picarr as item}}
+					<div class="mui-slider-item">
+						<a href="#"><img src="{{item}}" /></a>
+					</div>
+					{{/each}}
+			        <!--支持循环，需要重复图片节点-->
+			        <div class="mui-slider-item mui-slider-item-duplicate">
+			        	<a href="#"><img src="{{shop.picarr[0]}}" /></a>
+			        </div>
+		        </div>
+		    </div>
             {{if shop.if_pub == 1 && shop.seconds<=0}}
             <div class="userInfo">
             <div class="biaoqji"></div>
