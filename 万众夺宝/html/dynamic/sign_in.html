@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>签到</title>
+		<link rel="stylesheet" type="text/css" href="../../css/home/mui.min.css" />
+		<link rel="stylesheet" type="text/css" href="../../css/app/sign_in.css" />
+		<script src="../../js/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../../js/app/mui.min.js" type="text/javascript" charset="utf-8"></script>
+
+	</head>
+
+	<body>
+		<div id="sionin">
+			<img src="../../img/sionin.png" class="" />
+			<p class="plan">
+				<span></span>
+				<em></em>
+			</p>
+			<span id="button">马上签到</span>
+			<dl class="rule">
+				<dt>签到规则</dt>
+				<dd>每天可签到1次</dd>
+				<dd>签到每月清空</dd>
+				<dd>最终解释权归万众夺宝所有</dd>
+				<dd>声明：本活动与官方无关</dd>
+			</dl>
+		</div>
+		<script type="text/javascript">
+			$(function() {
+				var w = 0;
+				var plan = $('.plan');
+				var em = $('.plan em');
+				var emw = em.offset().left-10;
+				var span = $('.plan span');
+				$('body').delegate('#button', 'click', function() {
+					w++;
+					span.css('width', w + '0.5vw');
+					em.css('left',  w + '0vw');
+					alert(plan.width())
+					if (span.width() == plan.width()) {
+						span.width(plan.width());
+						em.css('left', plan.width());
+					}
+					if (localStorage.getItem('sign') != null) {
+						$('.plan').find('span').css('width', '50vw');
+					}
+				});
+			})
+		</script>
+	</body>
+
+</html>

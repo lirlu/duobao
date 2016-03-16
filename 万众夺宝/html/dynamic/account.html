@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>结算</title>
+		<link rel="stylesheet" href="../../css/mui.min.css" />
+		<link rel="stylesheet" href="../../css/app2/common.css" />
+		<link rel="stylesheet" href="../../css/app/recharge.css" />
+		
+	</head>
+
+	<body>
+		<!--头部-->
+		<!--<header class="bar">
+			<a class="left">
+				<img src="../img/left-jiantou.png" />
+			</a>
+			<h1 class="title">结算</h1>
+		</header>-->
+		<div class="content" id="noBody">
+			<div class="agment">总需支付金额：<span class="col" id="shopBody">￥</span></div>
+			<ul id="userBox">
+				<li class="account_li">
+					<div class="mui-radio mui-left goods_n">
+						<input type="radio" name="radio1" style="left: -2px;top: 10px;">
+					</div>
+					<div class="input_body">
+						您的福分
+						<p>您的可用福分为</p>
+					</div>
+				</li>
+				<li class="account_li">
+					<div class="mui-radio mui-left goods_n">
+						<input type="radio" name="radio1" style="left: -2px;top: 10px;">
+					</div>
+					<div class="input_body">
+						您的余额
+						<p>您的可用余额为</p>
+					</div>
+				</li>
+			</ul>
+			<div class="agment">请选择支付方式</div>
+			<ul>
+				<li class="style_li">
+					<img src="../../img/weixinzhifu.png" />
+					<div class="style_div">微信支付</div>
+					<span class="mui-radio mui-right" style="float: right;"><input type="radio" name="radio" style="right: 0px;"></span>
+				</li>
+				<!--<li class="style_li">
+					<img src="../img/zhifubao.png" />
+					<div class="style_div">微信支付</div>
+					<span class="mui-radio mui-right" style="float: right;"><input type="radio" name="radio" style="right: 0px;"></span>
+				</li>
+				<li class="style_li">
+					<img src="../img/jd.png" />
+					<div class="style_div">微信支付</div>
+					<span class="mui-radio mui-right" style="float: right;"><input type="radio" name="radio" style="right: 0px;"></span>
+				</li>-->
+			</ul>
+			<div class="bottom">
+				<button class="btn">立即支付</button>
+			</div>
+		</div>
+		<script type="text/template" id="shopInfo">
+			￥{{total()}}
+		</script>
+		<script type="text/template" id="userInfo">
+			<li class="account_li">
+				<div class="mui-radio mui-left goods_n">
+					<input type="radio" name="radio1" style="left: -2px;top: 10px;" {{if userxinxi.money<=0}} disabled {{/if}}>
+				</div>
+				<div class="input_body">
+					您的福分
+					<p>您的可用福分为0</p>
+				</div>
+			</li>
+			<li class="account_li">
+				<div class="mui-radio mui-left goods_n">
+					<input type="radio" name="radio1" style="left: -2px;top: 10px;" {{if userxinxi.money<=0}} disabled {{/if}}>
+				</div>
+				<div class="input_body">
+					{{if userxinxi.money>0}}您的余额{{else}}您的余额不足{{/if}}
+					<p>您的可用余额为{{userxinxi.money}}</p>
+				</div>
+			</li>
+		</script>
+		<script type="text/javascript" src="../../js/mui.js"></script>
+		<script type="text/javascript" src="../../js/jquery.min.js"></script>
+		<script type="text/javascript" src="../../js/config.js"></script>
+		<script type="text/javascript" src="../../js/template.js"></script>
+		<script type="text/javascript" src="../../js/global.js"></script>
+		<script type="text/javascript" src="../../js/ipaynow.js"></script>
+		<script type="text/javascript" src="../../js/app/pageDialog.js"></script>
+		<script type="text/javascript" src="../../js/app/Payment.js"></script>
+	</body>
+
+</html>

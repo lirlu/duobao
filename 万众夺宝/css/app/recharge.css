@@ -1,0 +1,36 @@
+.recharge{width: 100%;height: 50px;line-height: 50px;background: #FFFFFF;border-top: 1px solid #EFEFEF;margin-bottom: 3px;}
+.style{float: left;width: 50%;text-align: center;position: relative;}
+.active{border-bottom: 2px solid #FF5E00;color: #FF5E00;}
+.vertick{position: absolute;width: 1px;height: 100%;right: 0;top: 0;background: #FF5E00;}
+.price{width: 32%;height: 30px;background: #FFFFFF;float: left;border: 1px solid #FFFFFF;text-align: center;line-height: 30px;border-radius: 5px;margin-bottom: 6px;}
+.all_price{padding: 0 15px;overflow: hidden;}
+.price_two{margin: 0 2%;}
+.style_li{border-bottom: 1px solid #EFEFEF;padding: 8px 15px;}
+.style_li img{width: 30px;float: left;margin-right: 10px;}
+.style_div{padding-top: 5px;float: left;}
+.l_f{padding-left: 15px;float: left;line-height: 44px;}
+.r_f{float: left;}
+/***********************************/
+.rech_time{width: 33.33333333333333%;float: left;text-align: left;}
+.rech_add{width: 33.3333333333333333%;float: left;text-align: center;}
+.rech_price{width: 33.33333333333333%;float: left;text-align: right;}
+.account{border-bottom: 1px solid #EFEFEF;}
+.user_time{width: 50%;float: left;}
+.user_price{width: 50%;float: left;text-align: right;}
+/*************************************************/
+.good_div{width: 60px;float: left;}
+.good_div img{width: 50px}
+.good_body{float: left;padding-top: 12px;width: 78%;overflow:hidden;white-space:nowrap;text-overflow:ellipsis;}
+.bask_li{margin-top: 6px;}
+.bask_btn{float: right;border: 1px solid #FF5E00;border-radius: 5px;width: 80px;background: #FF5E00;color: #FFFFFF;padding: 4px 0;}
+.li_sed{margin-top: 0;border-top: 1px solid #EFEFEF;padding: 4px 15px;}
+/*******************************/
+.goods_n{width: 30px;float: left;height: 45px;}
+.input_body{float: left;width: 60%;height: 45px;}
+.account_li{padding: 4px 15px;border-bottom: 1px solid #EFEFEF;}
+
+
+
+
+
+

@@ -1,0 +1,61 @@
+ul{border-top: 1px solid #EFEFEF;}
+.appde{height: 80px;}
+.appde img{width: 60px;height: 60px;margin-right: 5px;border: 1px solid #FFFFFF;border-radius: 50%;float: left;margin-top: -2px;}
+.appra_body{float: left;width: 77%;padding-top: 7px;overflow:hidden;white-space:nowrap;text-overflow:ellipsis;color: #808080;font-size: 14px;}
+.time{color: #808080;font-size: 12px;float: right;}
+li:after{position: absolute;right: 0;bottom: 0;left: 65px;height: 1px;content: '';-webkit-transform: scaleY(.5);transform: scaleY(.5);background-color: #EFEFEF;}
+.distance{padding-left: 10px;}
+.appra_body p{font-size: 13px;}
+/***********************************************/
+.dfeer{width: 100%;overflow: hidden;}
+.dfeer img{width: 100%;}
+.fjreio{width: 49%;/*height: 200px;*/border: 1px solid #FFFFFF;border-radius: 6px;background: #FFFFFF;float: left;margin-top: 6px;}
+.fjiroi{overflow: hidden;padding: 0 8px;font-size: 14px;}
+.freji{width: 100%;height: 120px;text-align: center;padding-top: 5px;position: relative;}
+.freji img{width: 110px;}
+.fjreid{font-size: 12px;color: #FFFFFF;background: #22AAFF;width: 80px;border: 1px solid #22AAFF;border-radius: 3px;text-align: center;margin-left: 8px;height: 15px;line-height: 15px;position: absolute;bottom: 0px;right: 10px;}
+.schedule{width: 90%;height: 40px;font-size: 12px;margin: 0 auto;}
+.schbar{background-color: #EFEFEF;
+height: 6px;
+-moz-border-radius: 4px;
+-webkit-border-radius: 4px;
+border-radius: 4px;
+-moz-box-shadow: 0 1px 5px #efefef inset, 0 1px 0 #fd4c3c;
+-webkit-box-shadow: 0 1px 5px #EFEFEF inset, 0 1px 0 #fd4c3c;
+box-shadow: 0 1px 5px #EFEFEF inset, 0 1px 0 #EFEFEF;  }
+.schedule .bar_span{display: block;width: 50%;background: #FF5E00;height: 6px;-moz-border-radius: 4px;
+-webkit-border-radius: 4px; }
+.join1{width: 30%;float: left;font-size: 12px;}
+.join2{width: 40%;float: left;font-size: 12px;text-align: center;}
+.join3{width: 30%;float: right;font-size: 12px;text-align: right;}
+.frode{padding-left: 8px;font-size: 12px;height: 30px;line-height: 30px;}
+.deide{margin-top: -6px;color: #808080;font-size: 12px;}
+.btn_rt{border: 1px solid #FF5E00;background: #FF5E00;color: #FFFFFF;padding: 4px 8px;border-radius: 8px;float: left;}
+.fjid{width: 100%;height: 50px;padding: 10px 4px 0 8px;}
+.fjid img{width: 19%;float: right;}
+.rightfd{float: right;}
+/*************************************************/
+.dfjoi{width: 100%;overflow: hidden;background: #FFFFFF;/*border: 1px solid #EFEFEF;margin: 10px auto;*/text-align: center;}
+.logo{margin: 40px 0;font-size: 25px;}
+.logo img{width: 30%;}
+.erwei{margin: 20px 0;}
+.erwei img{width: 30%;}
+.dfjoi p{font-size: 12px;}
+.fop{/*margin-top: 30px;*/border-top: 1px solid #EFEFEF;padding:20px 0;position: absolute;bottom: 0;left: 0;width: 100%;}
+body{background: #FFFFFF;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

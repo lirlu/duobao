@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, user-scalable=no, maximum-scale=1.0" />
+		<title></title>
+		<link rel="stylesheet" href="../../css/mui.min.css" />
+		<link rel="stylesheet" href="../../css/common.css" />
+		<link rel="stylesheet" href="../../css/app/user.css" />
+		<style>
+			.img {
+				width: 30%;
+				/*height: 40%;*/
+				margin-left: 7%;
+			}
+			
+			.btn {
+				margin-left: 7%;
+				margin-top: 10%;
+				border-radius: 10px;
+				width: 100px;
+			}
+			
+			.r_l {
+				font-size: 14px;
+			}
+			
+			.z-Himg {
+				display: block;
+			}
+			
+			.mui-table-view-cell.mui-active {
+				background: #FFFFFF;
+			}
+		</style>
+	</head>
+
+	<body>
+		<!--头部-->
+		<div class="mui-content">
+			<div class="clearfix m-round m-name" id="wLogin" style="background-color:#F7F7F7;">
+				<div class="fl f-Himg LongBtn" style="background-color: #FFFFFF;">
+					<a class="z-Himg">
+						<img src="../../img/touxiang.png" class="img" />
+						<button class="btn" id="loginbut" title="登录">请登录</button>
+					</a>
+				</div>
+			</div>
+			<ul class="mui-table-view" id="Login">
+			</ul>
+			<section>
+				<div class="member" style="margin-top: 10px;">
+					<div class="left" id="user.userbuylist.html" title="我的订单">
+						<div class="left1"><img src="../../img/indent.png"></div>
+						<div class="left2">我的订单</div>
+					</div>
+					<div class="left" id="user.singlelist.html" title="我的晒单">
+						<div class="left1"><img src="../../img/indent.png"></div>
+						<div class="left2">我的晒单</div>
+					</div>
+					<div class="left" id="control-address.html" title="收获地址">
+						<div class="left1"><img src="../../img/userIco8.png"></div>
+						<div class="left2">收获地址</div>
+					</div>
+					<div class="left" id="user.orderlist.html" title="获得的商品">
+						<div class="left1"><img src="../../img/userIco6.png"></div>
+						<div class="left2">获得的商品</div>
+					</div>
+					<div class="left" id="gold-detail.html" title="我的积分">
+						<div class="left1"><img src="../../img/userIco2.png"></div>
+						<div class="left2">我的积分</div>
+					</div>
+					<div class="left" id="sign_in.html" title="签到">
+						<div class="left1"><img src="../../img/userIco1.png"></div>
+						<div class="left2">签到</div>
+					</div>
+					<div class="left" id="newtask.html" title="新手任务">
+						<div class="left1"><img src="../../img/userIco5.png"></div>
+						<div class="left2">新手任务</div>
+					</div>
+					<div class="left" id="generalize.html" title="推广">
+						<div class="left1"><img src="../../img/userIco3.png"></div>
+						<div class="left2">推广</div>
+					</div>
+					<div class="left" id="my-order.html" title="设置">
+						<div class="left1"><img src="../../img/set.png"></div>
+						<div class="left2">设置</div>
+					</div>
+					<div class="left" id="about.as.html" title="关于我们">
+						<div class="left1"><img src="../../img/userIco7.png"></div>
+						<div class="left2">关于我们</div>
+					</div>
+				</div>
+			</section>
+			<!--<section>
+				<div class="member" style="margin-top: 10px;">
+					<div class="left" id="my-order.html" title="个人设置">
+						<div class="left1"><img src="../../img/set.png"></div>
+						<div class="left2" >个人设置</div>
+					</div>
+					<div class="left" id="MyOrder.html" title="我的订单">
+						<div class="left1"><img src="../../img/indent.png"></div>
+						<div class="left2"  >我的订单</div>
+					</div>
+				</div>
+				<div class="member">
+					<div class="left" id="user.userbalance.html" title="账户明细">
+						<div class="left1"><img src="../../img/account.png"></div>
+						<div class="left2">账户明细</div>
+					</div>
+					<div class="left" id="gold-detail.html" title="金币明细">
+						<div class="left1"><img src="../../img/gold.png"></div>
+						<div class="left2">金币明细</div>
+					</div>
+				</div>
+				<div class="member">
+					<div class="left" id="my-packet.html" title="我的红包">
+						<div class="left1"><img src="../../img/red-packet.png"></div>
+						<div class="left2">我的红包</div>
+					</div>
+					<div class="left" id="WantPromote.html" title="分享赚钱">
+						<div class="left1"><img src="../../img/share.png"></div>
+						<div class="left2">分享赚钱</div>
+					</div>
+				</div>
+				
+			</section>-->
+			<script type="text/javascript" src="../../js/mui.js"></script>
+			<script type="text/javascript" src="../../js/mui.min.js"></script>
+			<script type="text/javascript" src="../../js/jquery.min.js"></script>
+			<script type="text/javascript" src="../../js/template.js"></script>
+			<script type="text/javascript" src="../../js/config.js"></script>
+			<script type="text/javascript" src="../../js/app/beifen/user.js"></script>
+			<script type="text/template" id="Login_ok">
+				<li class="mui-table-view-cell member">
+					<div class="f_l ">
+						<div id="my-order.html" title="个人信息" class="left" style="border-radius: 80px; height: 80px; width: 80px;overflow: hidden;"><img src="{{userxinxi.img}}" style="border-radius: 5px;width: 100%;height: 100%;" /></div>
+
+						<img src="../../img/xiangji.png" class="xiangji" id="modifyHeadImg" onclick="changeHeadImage()" />
+					</div>
+					<div class="r_l">
+						<span class="block">{{userxinxi.username}}</span>
+						<span class="block">会员等级：<span class="col1">LV{{userxinxi.groupid}}</span></span>
+						<span class="block">可用积分：<span class="col1">{{userxinxi.score}}</span></span>
+						<span class="block">余额：<span class="col1">{{userxinxi.money}}</span></span>
+					</div>
+					<div class="r_ll">
+						<button class="mui-btn" id="chongzhi" addres="user.recharge.html">充值</button>
+					</div>
+				</li>
+			</script>
+		</div>
+	</body>
+
+</html>

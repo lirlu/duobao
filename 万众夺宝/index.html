@@ -1,36 +1,39 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
-  <title>柚子</title>
-  <link href="css/mui.min.css" rel="stylesheet"/>
-  <link href="css/iconfont.css" rel="stylesheet"/>
-  <link href="css/common.css" rel="stylesheet"/>
-</head>
-<body>
-  <nav class="bar-tab">
-    <a title="首页" class="tab-item active" data-url='home.html'>
-      <i class="icon iconfont icon-home"></i>
-      <span class="tab-label">首页</span>
-    </a>
-    <a title="所有商品" class="tab-item" data-url='product.html'>
-      <i class="icon iconfont icon-browser"></i>
-      <span class="tab-label">所有商品</span>
-    </a>
-    <a title="购物车" class="tab-item" data-url='cart.html'>
-      <i class="icon iconfont icon-cart"></i>
-      <span class="tab-label">购物车</span>
-    </a>
-    <a title="我" class="tab-item" data-url='account.html'>
-      <i class="icon iconfont icon-my"></i>
-      <span class="tab-label">我</span>
-    </a>
-  </nav>
-  
-  <script src="js/mui.min.js"></script>
-  <script src="js/jquery.min.js"></script>
-  <script src="js/app.js"></script>
-  <script src="index.js"></script>
-</body>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+        <title>万众夺宝</title>
+        <link rel="stylesheet" href="css/mui.min.css" />
+        <link rel="stylesheet" type="text/css" href="css/app/comm.css"/>
+        <style>
+            .col{color: #d63049;}
+        </style>
+    </head>
+    <body>
+        <div id="app-nav" class="footerdi" style="bottom: 0px;">
+            <ul class="mui-bar mui-bar-tab">
+                <li class="f_home tab_b" id="defaultTab" title="首页" Address="index.index.html">
+                    <a class="nav-item no"><i class="cur">&nbsp;</i><span class="cur">首页</span></a>
+                </li>
+                <li class="f_jiexiao tab_b" id="lottery" title="全部商品" Address="classify.html">
+                    <a class="nav-item"><i>&nbsp;</i><span>全部商品</span></a>
+                </li>
+                <li class="f_whole tab_b" id="announce" title="最新揭晓" Address="new_announce.html">
+                    <a class="nav-item"><i>&nbsp;</i><span>最新揭晓</span></a>
+                </li>
+                <li class="f_car tab_b" id="buyCart" title="购物车" Address="cart.cartlist.html">
+                    <a class="nav-item"><i>&nbsp;</i><span>购物车</span></a>
+                </li>
+                <li class="f_personal tab_b" id="user" title="我" Address="user.html">
+                    <a class="nav-item"><i>&nbsp;</i><span>我</span></a>
+                </li>
+            </ul>
+        </div>
+        <script type="text/javascript" src="js/mui.min.js"></script>
+        <script type="text/javascript" src="js/jquery.min.js"></script>
+        <script type="text/javascript" src="js/config.js" ></script>
+        <script type="text/javascript" src="js/global.js" ></script>
+        <script type="text/javascript" src="js/index.js"></script>
+    </body>
 </html>

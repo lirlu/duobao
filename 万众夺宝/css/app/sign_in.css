@@ -1,0 +1,290 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	background-color: #eab141;
+	height: 100vh;
+	width: 100vw;
+	font-size: 1.1;
+}
+
+
+/*签到*/
+
+#sionin img {
+	width: 80%;
+	height: auto;
+	display: block;
+	margin: 6vh auto auto auto;
+}
+
+
+/*进度*/
+
+.plan {
+	background-color: #fff;
+	height: 3.5vh;
+	width: 80%;
+	margin: 3rem auto 4rem auto;
+	position: relative;
+	border-radius: 3vw;
+}
+
+.plan span {
+	width: 0%;
+	display: block;
+	height: 3.5vh;
+	background: #b38833;
+	position: absolute;
+	border-radius: 3vw;
+}
+
+.plan em {
+	width: 8vw;
+	height: 8vw;
+	position: relative;
+	top: 3.5vh;
+	left: -2.5vw;
+}
+
+.plan em:before,
+.plan em:after {
+	content: '';
+	display: block;
+	width: 8vw;
+	display: block;
+	height: 8vw;
+	border-radius: 100%;
+	position: absolute;
+}
+
+.plan em:before {
+	background: #fff;
+	top: 4vh;
+	z-index: 1;
+}
+
+.plan em:after {
+	background: #999;
+	height: 6vw;
+	-webkit-transform: rotate(60deg) skewX(40deg);
+	z-index: 0;
+	top: 2vh;
+}
+
+
+/*签到按钮*/
+
+
+/*//规则*/
+
+.rule {
+	text-align: left;
+	line-height: 2;
+	padding: 5%;
+}
+
+.rule dt {
+	font-size: 1.6rem;
+	text-align: center;
+}
+
+.rule dt:after,
+.rule dt:before {
+	content: '';
+	height: 1px;
+	background-color: #000;
+	width: 20%;
+	display: inline-block;
+	vertical-align: middle;
+}
+
+.rule dt:after {
+	margin-left: 5vw;
+}
+
+.rule dt:before {
+	margin-right: 5vw;
+}
+
+.rule dd {
+	text-indent: 8%;
+	color: #333;
+	counter-increment: testnum;
+}
+
+.rule dd:before {
+	content: counter(testnum)".";
+}
+
+.rule dd:last-child:before {
+	content: '';
+}
+
+
+/*新手任务*/
+
+#sionin ul {
+	margin-bottom: 5vh;
+}
+
+#sionin li {
+	padding: 5vw;
+	counter-increment: testname;
+}
+
+#sionin li:before {
+	content: counter(testname)".";
+}
+
+#button,
+.button {
+	width: 90%;
+	margin: auto;
+	display: block;
+	text-align: center;
+	padding: 3vh 0;
+	border-radius: 2vh;
+	font-family: "微软雅黑";
+	font-size: 4vh;
+	background-color: #e20328;
+	color: #fff;
+}
+
+#button:active,
+.button:active {
+	background-color: red;
+}
+
+
+/*//规则*/
+
+.rule {
+	text-align: left;
+	line-height: 2;
+	padding: 5% 2%;
+}
+
+.rule dt {
+	font-size: 1.3rem;
+	text-align: center;
+}
+
+.rule dt:after,
+.rule dt:before {
+	content: '';
+	height: 1px;
+	background-color: #000;
+	width: 20%;
+	display: inline-block;
+	vertical-align: middle;
+}
+
+.rule dt:after {
+	margin-left: 5vw;
+}
+
+.rule dt:before {
+	margin-right: 5vw;
+}
+
+.rule dd {
+	text-indent: 2%;
+	color: #333;
+	counter-increment: testname;
+}
+
+.rule dd:before {
+	content: counter(testname)".";
+}
+
+.rule dd:last-child {
+	color: #e20328 !important;
+}
+
+.rule dd:last-child:before {
+	content: '';
+}
+
+
+/*推广*/
+
+.inteBox span,
+.fiedBox .flex:last-child span {
+	color: #df0225;
+	font-family: '微软雅黑';
+}
+
+.inteBox {
+	padding-top: 1rem;
+}
+
+.inteBox .flex:first-child {
+	flex: 7;
+}
+
+.inteBox .flex:last-child {
+	flex: 3;
+}
+
+.inteBox .flex:last-child:after {
+	content: '积分';
+}
+
+.inteBox .flex {
+	line-height: 3;
+	font-size: 1.2rem;
+	font-family: '宋体';
+	color: #333;
+}
+
+.flex {
+	background-color: #fff;
+	margin: 0.4rem;
+	line-height: 1.6;
+	padding: 0.5rem;
+}
+
+
+/*好友等*/
+
+.fiedBox,
+.inteBox,
+.awardBox {
+	display: flex;
+	text-align: center;
+	border-bottom: #eee 1px solid;
+}
+
+.fiedBox .flex,
+.awardBox .flex {
+	flex: 1;
+}
+
+.fiedBox .flex:first-child span{color: #51b2e9;}
+.fiedBox .flex:nth-child(2) span{color: #9db55e;}
+
+.awardBox .flex {
+	margin: 0;
+}
+
+
+.awardBox .flex:nth-child(2){flex: 5;}
+.awardBox .flex:nth-child(3){flex: 1.7;}
+.awardTitle {
+	background-color: #fff;
+	line-height: 3;
+	border-bottom: 1px #df0225 solid;
+	text-align: center;
+}
+
+
+.moveList {
+	margin: 0.5rem 0.5rem 1rem 0.5rem;
+}
+
+.awardBox:last-child{min-height: 5rem;overflow: auto;}
+
+

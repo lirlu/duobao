@@ -1,27 +1,30 @@
 {
-	"@platforms": ["android", "iPhone", "iPad"],
-	"id": "H5FD57E08",/*应用的标识，创建应用时自动生成，勿手动修改*/
-	"name": "万众夺宝",/*应用名称，程序桌面图标名称*/
-	"version": {
-		"name": "1.0.0",/*应用版本名称*/
-		"code": "83"
-	},
-	"description": "",/*应用描述信息*/
-	"icons": {
-		"72": "icon.png"
-	},
-	"launch_path": "index.html",/*应用的入口页面，默认为根目录下的index.html；支持网络地址，必须以http://或https://开头*/
-	"developer": {
-		"name": "",/*开发者名称*/
-		"email": "",/*开发者邮箱地址*/
-		"url": "http://www.dcloud.io"
-	},
-	"permissions": {
-		"Accelerometer": {
+    "@platforms": ["android", "iPhone", "iPad"],
+    "id": "H571B9FBB",/*应用的标识，创建应用时自动生成，勿手动修改*/
+    "name": "vvv",/*应用名称，程序桌面图标名称*/
+    "version": {
+        "name": "1.0",/*应用版本名称*/
+        "code": ""
+    },
+    "description": "",/*应用描述信息*/
+    "icons": {
+        "72": "icon.png"
+    },
+    "launch_path": "index.html",/*应用的入口页面，默认为根目录下的index.html；支持网络地址，必须以http://或https://开头*/
+    "developer": {
+        "name": "",/*开发者名称*/
+        "email": "",/*开发者邮箱地址*/
+        "url": ""/*开发者个人主页地址*/
+    },
+    "permissions": {
+        "Accelerometer": {
             "description": "访问加速度感应器"
         },
         "Audio": {
             "description": "访问麦克风"
+        },
+        "Messaging":{
+        	"description": "短彩邮件插件"
         },
         "Cache": {
             "description": "管理应用缓存"
@@ -53,11 +56,8 @@
         "Geolocation": {
             "description": "访问位置信息"
         },
-         "Invocation": {
+        "Invocation": {
             "description": "使用Native.js能力"
-        },
-        "Messaging": {
-            "description": "访问通讯能力"
         },
         "Orientation": {
             "description": "访问方向感应器"
@@ -101,93 +101,686 @@
         },
         "NativeObj":{
         	"description": "原生对象"
+        },"Share":{}
+    },
+    "plus": {
+        "splashscreen": {
+            "autoclose": true,/*是否自动关闭程序启动界面，true表示应用加载应用入口页面后自动关闭；false则需调plus.navigator.closeSplashscreen()关闭*/
+            "waiting": true/*是否在程序启动界面显示等待雪花，true表示显示，false表示不显示。*/
+        },
+        "popGesture": "close",/*设置应用默认侧滑返回关闭Webview窗口，"none"为无侧滑返回功能，"hide"为侧滑隐藏Webview窗口。参考http://ask.dcloud.net.cn/article/102*/
+        "runmode": "normal",/*应用的首次启动运行模式，可取liberate或normal，liberate模式在第一次启动时将解压应用资源（Android平台File API才可正常访问_www目录）*/
+        "signature": "Sk9JTiBVUyBtYWlsdG86aHIyMDEzQGRjbG91ZC5pbw==",/*可选，保留给应用签名，暂不使用*/
+        "distribute": {"plugins":{"share":{"weixin":{"appid":"","appsecret":"","description":"可选，微信分享"}}},
+            "apple": {
+                "appid": "",/*iOS应用标识，苹果开发网站申请的appid，如io.dcloud.HelloH5*/
+                "mobileprovision": "",/*iOS应用打包配置文件*/
+                "password": "",/*iOS应用打包个人证书导入密码*/
+                "p12": "",/*iOS应用打包个人证书，打包配置文件关联的个人证书*/
+                "devices": "universal",/*iOS应用支持的设备类型，可取值iphone/ipad/universal*/
+                "frameworks":[
+                ]/*调用Native.js调用原生Objective-c API需要引用的FrameWork，如需调用GameCenter，则添加"GameKit.framework"*/
+            },
+            "google": {
+                "packagename": "",/*Android应用包名，如io.dcloud.HelloH5*/
+                "keystore": "",/*Android应用打包使用的密钥库文件*/
+                "password": "",/*Android应用打包使用密钥库中证书的密码*/
+                "aliasname": "",/*Android应用打包使用密钥库中证书的别名*/
+               "permissions": ["<uses-permission android:name=\"android.permission.RECORD_AUDIO\"/>","<uses-permission android:name=\"android.permission.GET_ACCOUNTS\"/>","<uses-permission android:name=\"android.permission.CHANGE_NETWORK_STATE\"/>","<uses-permission android:name=\"android.permission.MODIFY_AUDIO_SETTINGS\"/>","<uses-permission android:name=\"android.permission.MOUNT_UNMOUNT_FILESYSTEMS\"/>","<uses-permission android:name=\"android.permission.READ_CONTACTS\"/>","<uses-permission android:name=\"android.permission.CHANGE_WIFI_STATE\"/>","<uses-permission android:name=\"android.permission.READ_PHONE_STATE\"/>","<uses-permission android:name=\"android.permission.VIBRATE\"/>","<uses-permission android:name=\"android.permission.READ_LOGS\"/>","<uses-permission android:name=\"android.permission.WAKE_LOCK\"/>","<uses-permission android:name=\"android.permission.FLASHLIGHT\"/>","<uses-permission android:name=\"android.permission.CALL_PHONE\"/>","<uses-permission android:name=\"android.permission.ACCESS_WIFI_STATE\"/>","<uses-permission android:name=\"android.permission.ACCESS_COARSE_LOCATION\"/>","<uses-feature android:name=\"android.hardware.camera.autofocus\"/>","<uses-feature android:name=\"android.hardware.camera\"/>","<uses-permission android:name=\"android.permission.WRITE_CONTACTS\"/>","<uses-permission android:name=\"android.permission.ACCESS_FINE_LOCATION\"/>","<uses-permission android:name=\"android.permission.ACCESS_NETWORK_STATE\"/>","<uses-permission android:name=\"android.permission.WRITE_SETTINGS\"/>","<uses-permission android:name=\"android.permission.CAMERA\"/>"]
+				/*使用Native.js调用原生安卓API需要使用到的系统权限*/
+            },
+            "orientation": [
+                "portrait-primary"
+            ],/*应用支持的方向，portrait-primary：竖屏正方向；portrait-secondary：竖屏反方向；landscape-primary：横屏正方向；landscape-secondary：横屏反方向*/
+            "icons": {
+                "ios": {
+                    "prerendered": true, /*应用图标是否已经高亮处理，在iOS6及以下设备上有效*/
+                    "auto": "", /*应用图标，分辨率：512x512，用于自动生成各种尺寸程序图标*/
+                    "iphone": {
+                        "normal": "", /*iPhone3/3GS程序图标，分辨率：57x57*/
+                        "retina": "", /*iPhone4程序图标，分辨率：114x114*/
+                        "retina7": "", /*iPhone4S/5/6程序图标，分辨率：120x120*/
+			"retina8": "", /*iPhone6 Plus程序图标，分辨率：180x180*/
+                        "spotlight-normal": "", /*iPhone3/3GS Spotlight搜索程序图标，分辨率：29x29*/
+                        "spotlight-retina": "", /*iPhone4 Spotlight搜索程序图标，分辨率：58x58*/
+                        "spotlight-retina7": "", /*iPhone4S/5/6 Spotlight搜索程序图标，分辨率：80x80*/
+                        "settings-normal": "", /*iPhone4设置页面程序图标，分辨率：29x29*/
+                        "settings-retina": "", /*iPhone4S/5/6设置页面程序图标，分辨率：58x58*/
+			"settings-retina8": "" /*iPhone6Plus设置页面程序图标，分辨率：87x87*/
+                    },
+                    "ipad": {
+                        "normal": "", /*iPad普通屏幕程序图标，分辨率：72x72*/
+                        "retina": "", /*iPad高分屏程序图标，分辨率：144x144*/
+                        "normal7": "", /*iPad iOS7程序图标，分辨率：76x76*/
+                        "retina7": "", /*iPad iOS7高分屏程序图标，分辨率：152x152*/
+                        "spotlight-normal": "", /*iPad Spotlight搜索程序图标，分辨率：50x50*/
+                        "spotlight-retina": "", /*iPad高分屏Spotlight搜索程序图标，分辨率：100x100*/
+                        "spotlight-normal7": "",/*iPad iOS7 Spotlight搜索程序图标，分辨率：40x40*/
+                        "spotlight-retina7": "",/*iPad iOS7高分屏Spotlight搜索程序图标，分辨率：80x80*/
+                        "settings-normal": "",/*iPad设置页面程序图标，分辨率：29x29*/
+                        "settings-retina": "" /*iPad高分屏设置页面程序图标，分辨率：58x58*/
+                    }
+                },
+                "android": {
+                    "mdpi": "", /*普通屏程序图标，分辨率：48x48*/
+                    "ldpi": "", /*大屏程序图标，分辨率：48x48*/
+                    "hdpi": "", /*高分屏程序图标，分辨率：72x72*/
+                    "xhdpi": "",/*720P高分屏程序图标，分辨率：96x96*/
+                    "xxhdpi": ""/*1080P 高分屏程序图标，分辨率：144x144*/
+                }
+            },
+            "splashscreen": {
+                "ios": {
+                    "iphone": {
+                        "default": "", /*iPhone3启动图片选，分辨率：320x480*/
+                        "retina35": "",/*3.5英寸设备(iPhone4)启动图片，分辨率：640x960*/
+                        "retina40": "",/*4.0 英寸设备(iPhone5/iPhone5s)启动图片，分辨率：640x1136*/
+                        "retina47": "",/*4.7 英寸设备(iPhone6)启动图片，分辨率：750x1334*/
+                        "retina55": "",/*5.5 英寸设备(iPhone6 Plus)启动图片，分辨率：1242x2208*/
+                        "retina55l": ""/*5.5 英寸设备(iPhone6 Plus)横屏启动图片，分辨率：2208x1242*/
+                    },
+                    "ipad": {
+                        "portrait": "", /*iPad竖屏启动图片，分辨率：768x1004*/
+                        "portrait-retina": "",/*iPad高分屏竖屏图片，分辨率：1536x2008*/
+                        "landscape": "", /*iPad横屏启动图片，分辨率：1024x748*/
+                        "landscape-retina": "", /*iPad高分屏横屏启动图片，分辨率：2048x1496*/
+                        "portrait7": "", /*iPad iOS7竖屏启动图片，分辨率：768x1024*/
+                        "portrait-retina7": "",/*iPad iOS7高分屏竖屏图片，分辨率：1536x2048*/
+                        "landscape7": "", /*iPad iOS7横屏启动图片，分辨率：1024x768*/
+                        "landscape-retina7": ""/*iPad iOS7高分屏横屏启动图片，分辨率：2048x1536*/
+                    }
+                },
+                "android": {
+                    "mdpi": "", /*普通屏启动图片，分辨率：240x282*/
+                    "ldpi": "", /*大屏启动图片，分辨率：320x442*/
+                    "hdpi": "", /*高分屏启动图片，分辨率：480x762*/
+                    "xhdpi": "", /*720P高分屏启动图片，分辨率：720x1242*/
+                    "xxhdpi": ""/*1080P高分屏启动图片，分辨率：1080x1882*/
+                }
+            }
         }
-	},
-	"plus": {
-		"splashscreen": {
-			"autoclose": true,/*是否自动关闭程序启动界面，true表示应用加载应用入口页面后自动关闭；false则需调plus.navigator.closeSplashscreen()关闭*/
-			"waiting": true,"delay":"2000"
-		},
-		"runmode": "liberate",/*应用的首次启动运行模式，可取liberate或normal，liberate模式在第一次启动时将解压应用资源（Android平台File API才可正常访问_www目录）*/
-		"signature": "Sk9JTiBVUyBtYWlsdG86aHIyMDEzQGRjbG91ZC5pbw==",/*可选，保留给应用签名，暂不使用*/
-		"distribute": {
-			"apple": {
-				"appid": "",/*iOS应用标识，苹果开发网站申请的appid，如io.dcloud.HelloH5*/
-				"mobileprovision": "",/*iOS应用打包配置文件*/
-				"password": "",/*iOS应用打包个人证书导入密码*/
-				"p12": "",/*iOS应用打包个人证书，打包配置文件关联的个人证书*/
-				"devices": "universal",/*iOS应用支持的设备类型，可取值iphone/ipad/universal*/
-				"frameworks": []
+    },
+	"dependencies": {
+		"pages": {
+			"index.html": {
+				"resources": [
+					"html/dynamic/IndexHead.html",
+					"js/jquery.min.js",
+					"js/mui.min.js",
+					"css/mui.min.css",
+					"img/c-picture2.png",
+					"css/app/comm.css",
+					"js/global.js",
+					"js/index.js",
+					"js/config.js"
+				],
+				"refer": [
+					"html/start.html",
+					"html/guide.html"
+				],
+				"priority": 0
 			},
-			"google": {
-				"packagename": "",/*Android应用包名，如io.dcloud.HelloH5*/
-				"keystore": "",/*Android应用打包使用的密钥库文件*/
-				"password": "",/*Android应用打包使用密钥库中证书的密码*/
-				"aliasname": "",/*Android应用打包使用密钥库中证书的别名*/
-				"permissions": ["<uses-permission android:name=\"android.permission.CHANGE_NETWORK_STATE\"/>","<uses-permission android:name=\"android.permission.MOUNT_UNMOUNT_FILESYSTEMS\"/>","<uses-permission android:name=\"android.permission.READ_CONTACTS\"/>","<uses-permission android:name=\"android.permission.VIBRATE\"/>","<uses-permission android:name=\"android.permission.READ_LOGS\"/>","<uses-permission android:name=\"android.permission.ACCESS_WIFI_STATE\"/>","<uses-feature android:name=\"android.hardware.camera.autofocus\"/>","<uses-permission android:name=\"android.permission.WRITE_CONTACTS\"/>","<uses-permission android:name=\"android.permission.ACCESS_NETWORK_STATE\"/>","<uses-permission android:name=\"com.android.launcher.permission.UNINSTALL_SHORTCUT\"/>","<uses-permission android:name=\"android.permission.CAMERA\"/>","<uses-permission android:name=\"android.permission.GET_ACCOUNTS\"/>","<uses-permission android:name=\"android.permission.RECORD_AUDIO\"/>","<uses-permission android:name=\"android.permission.MODIFY_AUDIO_SETTINGS\"/>","<uses-permission android:name=\"com.android.launcher.permission.INSTALL_SHORTCUT\"/>","<uses-permission android:name=\"android.permission.READ_PHONE_STATE\"/>","<uses-permission android:name=\"android.permission.CHANGE_WIFI_STATE\"/>","<uses-permission android:name=\"android.permission.WAKE_LOCK\"/>","<uses-permission android:name=\"android.permission.FLASHLIGHT\"/>","<uses-permission android:name=\"android.permission.CALL_PHONE\"/>","<uses-permission android:name=\"android.permission.ACCESS_COARSE_LOCATION\"/>","<uses-feature android:name=\"android.hardware.camera\"/>","<uses-permission android:name=\"android.permission.ACCESS_FINE_LOCATION\"/>","<uses-permission android:name=\"android.permission.WRITE_SETTINGS\"/>"]
+			"html/dynamic/IndexHead.html": {
+				"resources": [
+					"html/dynamic/buyrecords.html",
+					"js/jquery.min.js",
+					"js/mui.min.js",
+					"css/mui.min.css",
+					"img/logo_wap.png",
+					"css/app/comm.css",
+					"img/logo.png",
+					"css/app/index.css",
+					"img/icon-left.png",
+					"html/dynamic/index.item.html",
+					"html/dynamic/index.index.html"
+				],
+				"refer": [
+					"html/dynamic/user.html",
+					"html/dynamic/index.goodsdesc.html",
+					"html/dynamic/index.goodspost.html",
+					"html/dynamic/sign_in.html",
+					"html/dynamic/newtask.html",
+					"html/dynamic/WantPromote.html",
+					"html/dynamic/my-order.html",
+					"html/dynamic/generalize.html",
+					"html/dynamic/MyHBao.html",
+					"html/dynamic/classify.html",
+					"html/dynamic/new_announce.html",
+					"html/dynamic/cart.cartlist.html",
+					"html/dynamic/index.calResult.html"
+				],
+				"priority": 0
 			},
-			"orientation": ["portrait-primary", "portrait-secondary"],/*应用支持的方向，portrait-primary：竖屏正方向；portrait-secondary：竖屏反方向；landscape-primary：横屏正方向；landscape-secondary：横屏反方向*/
-			"icons": {
-				"ios": {
-					"prerendered": true, /*应用图标是否已经高亮处理，在iOS6及以下设备上有效*/
-					"auto": "", /*应用图标，分辨率：512x512，用于自动生成各种尺寸程序图标*/
-					"iphone": {
-						"normal": "",/*iPhone普通屏幕程序图标，分辨率：57x57*/
-						"retina": "",/*iPhone高分屏程序图标，分辨率：114x114*/
-						"retina7": "",/*iPhone iOS7高分屏程序图标，分辨率：120x120*/
-						"spotlight-normal": "", /*iPhone Spotlight搜索程序图标，分辨率：29x29*/
-						"spotlight-retina": "", /*iPhone高分屏Spotlight搜索程序图标，分辨率：58x58*/
-						"spotlight-retina7": "",/*iPhone iOS7高分屏Spotlight搜索程序图标，分辨率：80x80*/
-						"settings-normal": "", /*iPhone设置页面程序图标，分辨率：29x29*/
-						"settings-retina": ""
-					},
-					"ipad": {
-						"normal": "", /*iPad普通屏幕程序图标，分辨率：72x72*/
-						"retina": "", /*iPad高分屏程序图标，分辨率：144x144*/
-						"normal7": "", /*iPad iOS7程序图标，分辨率：76x76*/
-						"retina7": "", /*iPad iOS7高分屏程序图标，分辨率：152x152*/
-						"spotlight-normal": "", /*iPad Spotlight搜索程序图标，分辨率：50x50*/
-						"spotlight-retina": "", /*iPad高分屏Spotlight搜索程序图标，分辨率：100x100*/
-						"spotlight-normal7": "",/*iPad iOS7 Spotlight搜索程序图标，分辨率：40x40*/
-						"spotlight-retina7": "",/*iPad iOS7高分屏Spotlight搜索程序图标，分辨率：80x80*/
-						"settings-normal": "",/*iPad设置页面程序图标，分辨率：29x29*/
-						"settings-retina": ""
-					}
-				},
-				"android": {
-					"mdpi": "", /*普通屏程序图标，分辨率：48x48*/
-					"ldpi": "", /*大屏程序图标，分辨率：48x48*/
-					"hdpi": "", /*高分屏程序图标，分辨率：72x72*/
-					"xhdpi": "",/*720P高分屏程序图标，分辨率：96x96*/
-					"xxhdpi": ""
-				}
+			"html/dynamic/user.html": {
+				"resources": [
+					"img/userIco1.png",
+					"img/userIco5.png",
+					"js/app/beifen/user.js",
+					"img/indent.png",
+					"img/userIco3.png",
+					"img/userIco7.png",
+					"css/common.css",
+					"img/set.png",
+					"img/userIco8.png",
+					"css/app/user.css",
+					"js/template.js",
+					"js/mui.js",
+					"img/touxiang.png",
+					"img/userIco6.png",
+					"js/config.js",
+					"img/userIco2.png",
+					"js/jquery.min.js",
+					"js/mui.min.js",
+					"css/mui.min.css",
+					"img/xiangji.png"
+				],
+				"refer": [
+					"html/dynamic/user.login.html",
+					"html/dynamic/IndexHead.html"
+				],
+				"priority": 0
 			},
-			"splashscreen": {
-				"ios": {
-					"iphone": {
-						"default": "", /*iPhone3启动图片选，分辨率：320x480*/
-						"retina35": "",/*3.5英寸设备(iPhone4)启动图片，分辨率：640x960*/
-						"retina40": ""
-					},
-					"ipad": {
-						"portrait": "", /*iPad竖屏启动图片，分辨率：768x1004*/
-						"portrait-retina": "",/*iPad高分屏竖屏图片，分辨率：1536x2008*/
-						"landscape": "", /*iPad横屏启动图片，分辨率：1024x748*/
-						"landscape-retina": "", /*iPad高分屏横屏启动图片，分辨率：2048x1496*/
-						"portrait7": "", /*iPad iOS7竖屏启动图片，分辨率：768x1024*/
-						"portrait-retina7": "",/*iPad iOS7高分屏竖屏图片，分辨率：1536x2048*/
-						"landscape7": "", /*iPad iOS7横屏启动图片，分辨率：1024x768*/
-						"landscape-retina7": ""
-					}
-				},
-				"android": {
-					"mdpi": "", /*普通屏启动图片，分辨率：240x282*/
-					"ldpi": "", /*大屏启动图片，分辨率：320x442*/
-					"hdpi": "", /*高分屏启动图片，分辨率：480x762*/
-					"xhdpi": "", /*720P高分屏启动图片，分辨率：720x1242*/
-					"xxhdpi": ""
-				}
+			"html/start.html": {
+				"resources": [
+					"img/guide1.png"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"html/dynamic/index.index.html": {
+				"resources": [
+					"js/app/Index.js",
+					"js/LotteryTimeFun.js",
+					"js/md5.min.js",
+					"img/translate.png",
+					"js/imgload.js",
+					"js/fun.js",
+					"img/loading.gif",
+					"img/Bask.png",
+					"img/problem.png",
+					"js/app/Flexslider.js",
+					"css/app/comm.css",
+					"img/icon-gouwuche.png",
+					"css/home/index.css",
+					"js/mui.js",
+					"js/template.js",
+					"img/classify.png",
+					"js/jquery.base64.js",
+					"js/jquery.min.js",
+					"css/app/index.css",
+					"css/mui.min.css",
+					"js/global.js",
+					"js/config.js"
+				],
+				"refer": [
+					"html/dynamic/IndexHead.html"
+				],
+				"priority": 0
+			},
+			"html/dynamic/index.item.html": {
+				"resources": [
+					"js/Countdown.js",
+					"js/app/GoodsPicSlider.js",
+					"img/huojiangzhebg.png",
+					"js/app/PeriodSlider.js",
+					"css/app/goods.css",
+					"css/app/comm.css",
+					"js/global.js",
+					"css/home/index.css",
+					"js/app/index.item.js",
+					"img/huojiangzhe.png",
+					"js/jquery.min.js",
+					"css/mui.min.css",
+					"js/mui.js",
+					"js/template.js",
+					"js/config.js"
+				],
+				"refer": [
+					"html/dynamic/IndexHead.html"
+				],
+				"priority": 0
+			},
+			"html/dynamic/buyrecords.html": {
+				"resources": [
+					"js/app/buyrecords.js",
+					"css/app/comm.css",
+					"css/app/goods.css",
+					"js/global.js",
+					"js/template.js",
+					"js/mui.js",
+					"css/home/index.css",
+					"js/config.js"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"html/dynamic/index.goodsdesc.html": {
+				"resources": [
+					"js/app/gooddesc.js",
+					"css/app/goods.css",
+					"css/app/comm.css",
+					"js/mui.js",
+					"css/home/index.css"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"html/dynamic/index.goodspost.html": {
+				"resources": [
+					"js/app/goodPost.js",
+					"js/app/GoodsPicSlider.js",
+					"img/share-img.png",
+					"img/iconfont-pinglun.png",
+					"css/iconfont1.css",
+					"js/app/PeriodSlider.js",
+					"css/app/comm.css",
+					"js/global.js",
+					"img/iconfont-xin.png",
+					"css/home/index.css",
+					"js/mui.js",
+					"js/template.js",
+					"css/app/single.css",
+					"js/config.js"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"html/dynamic/user.login.html": {
+				"resources": [
+					"css/app/comm.css",
+					"css/home/app.css",
+					"css/home/index.css",
+					"img/loginSet.png",
+					"js/app/beifen/UserLogin.js",
+					"img/icon-left.png",
+					"css/app/login.css",
+					"img/108UI.png"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"html/dynamic/sign_in.html": {
+				"resources": [
+					"css/home/mui.min.css",
+					"css/app/sign_in.css",
+					"img/sionin.png"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"html/dynamic/newtask.html": {
+				"resources": [
+					"css/home/mui.min.css",
+					"css/app/sign_in.css"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"html/dynamic/WantPromote.html": {
+				"resources": [
+					"js/app/beifen/WantPromote.js",
+					"css/app/member.css",
+					"css/app/comm.css",
+					"js/mui.js",
+					"css/home/index.css",
+					"js/config.js"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"html/dynamic/my-order.html": {
+				"resources": [
+					"js/app/beifen/myOrder.js",
+					"js/upImg.js",
+					"css/app/member.css",
+					"css/app/comm.css",
+					"js/jsfun.js",
+					"js/template.js",
+					"js/mui.js",
+					"css/home/index.css",
+					"js/z-app.js",
+					"img/touxiang.png",
+					"js/app/pageDialog.js",
+					"js/config.js"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"html/dynamic/generalize.html": {
+				"resources": [
+					"css/app/sign_in.css",
+					"js/mui.js"
+				],
+				"refer": [
+					"html/dynamic/IndexHead.html"
+				],
+				"priority": 0
+			},
+			"html/dynamic/MyHBao.html": {
+				"resources": [
+					"js/app/beifen/MyHBao.js",
+					"css/app/member.css",
+					"css/app/comm.css",
+					"js/template.js",
+					"css/home/index.css",
+					"js/config.js"
+				],
+				"refer": [
+					"html/dynamic/IndexHead.html"
+				],
+				"priority": 0
+			},
+			"html/dynamic/classify.html": {
+				"resources": [
+					"js/app/index.glist.js",
+					"css/common.css",
+					"img/card-hon.png",
+					"css/app/classify.css",
+					"css/app/comm.css",
+					"js/global.js",
+					"js/template.js",
+					"js/config.js"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"html/dynamic/new_announce.html": {
+				"resources": [
+					"js/app/LotteryTimeFun.js",
+					"css/app/lottery.css",
+					"css/app/comm.css",
+					"css/home/index.css",
+					"js/app2/index.lottery.js",
+					"js/global.js",
+					"js/template.js",
+					"js/config.js"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"html/dynamic/cart.cartlist.html": {
+				"resources": [
+					"css/app/cartList.css",
+					"js/app/CartindexFun.js",
+					"css/app/comm.css",
+					"js/mui.js",
+					"js/app/pageDialog.js",
+					"img/setIcon.png"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"html/guide.html": {
+				"resources": [
+					"img/guide2.png",
+					"img/guide1.png",
+					"img/guide3.png"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"html/dynamic/index.calResult.html": {
+				"resources": [
+					"css/app/lottery.css",
+					"css/app/comm.css"
+				],
+				"refer": [],
+				"priority": 0
 			}
+		},
+		"idle": {
+			"resources": [
+				"css/app/single.css.mine",
+				"img/account.png",
+				"img/fenlei.png",
+				"js/app/OrderListFun.js",
+				"img/iconfont-fenxiang (3).png",
+				"js/app/beifen/GoodsListFun.js",
+				"css/app2/all.appraise.css",
+				"img/icon-zan.png",
+				"js/app/cartList.js",
+				"html/dynamic/index.about.html",
+				"js/mui.view.js",
+				"img/sort.png",
+				"html/dynamic/MyOrder.html",
+				"js/app/jquery190.js",
+				"fonts/mui.ttf",
+				"img/zanwujilu.png",
+				"js/app/Login.js",
+				"js/mui.lazyload.js",
+				"js/app/Payment.js",
+				"img/gou.png",
+				"js/app/CalResult.js",
+				"img/share.png",
+				"img/No.png",
+				"img/goods.png",
+				"js/app/beifen/index.Findpossword.js",
+				"img/iconfont-star.png",
+				"js/app/discover.js",
+				"img/downarrow.png",
+				"js/app/IndexFun.js",
+				"html/dynamic/user.index.html",
+				"img/honbao.png",
+				"html/dynamic/index.register.html",
+				"img/mg-default.png",
+				"js/app/BottomFun.js",
+				"html/dynamic/about.as.html",
+				"js/app/BuyRecordFun.js",
+				"js/app/Lottery.js",
+				"js/app/AutoLottery.js",
+				"img/c-picture.png",
+				"html/dynamic/index.autolottery.html",
+				"html/dynamic/index.glist.html",
+				"js/indexShaiDan.js",
+				"img/shoubiao.png",
+				"html/dynamic/recharge.html",
+				"js/app/MobileCheckFun.js",
+				"img/weixinzhifu.png",
+				"img/erweima.png",
+				"js/app/GoodsListFun.js",
+				"css/app/helo.css",
+				"js/app/beifen/control-address.js",
+				"img/faxian-hui.png",
+				"js/app/beifen/jinbiduihuan.js",
+				"img/iconfont-tianjia.png",
+				"js/app/beifen/announced.js",
+				"js/app/beifen/Register.js",
+				"img/newone.png",
+				"js/app/beifen/immersed.js",
+				"js/mui.picker.min.js",
+				"img/jiexiao-hui.png",
+				"html/dynamic/wenzhangxiang.html",
+				"html/dynamic/index.payment.html",
+				"js/app/beifen/my-packet.js",
+				"img/delete.png",
+				"js/app/RegisterFun.js",
+				"html/dynamic/index.top.html",
+				"img/todayone.png",
+				"img/Hlimit-bg.png",
+				"js/app/recharge.js",
+				"js/app/CountdownFun.js",
+				"img/clock.png",
+				"img/banner.jpg",
+				"img/newtwo.png",
+				"js/app/beifen/userbuylist.js",
+				"img/mainIcon.png",
+				"js/jquery.form.min.js",
+				"css/app/recharge.css",
+				"img/me-hui.png",
+				"js/immersed.js",
+				"js/app/MobileCheck.js",
+				"js/app/CalResultFun.js",
+				"img/member-icon.png",
+				"js/zepto.min.js",
+				"js/app/mui.picker.min.js",
+				"html/dynamic/user.mobilecheck.html",
+				"img/iconfont-pinglun (2).png",
+				"img/iconfont-fenxiang (2).png",
+				"js/app/beifen/Lottery.js",
+				"js/app/beifen/Index.js",
+				"img/renrenduobao.png",
+				"fonts/font/iconfont.ttf",
+				"img/zhifubao.png",
+				"html/dynamic/user.singlelist.html",
+				"img/f_picture.png",
+				"js/app/beifen/add-address.js",
+				"html/dynamic/index.index-.html",
+				"html/dynamic/jinbiduihuan.html",
+				"js/app/index.lottery.js",
+				"img/geren.png",
+				"img/gold.png",
+				"js/app/GoodsTimeFun.js",
+				"js/app/consumptionlistFun.js",
+				"js/app/beifen/PostListFun.js",
+				"img/jiexiao-hon.png",
+				"img/logo_gray.png",
+				"img/duobao-hon.png",
+				"html/dynamic/user.userbuyDetail.html",
+				"js/app/beifen/LotteryDetailFun.js",
+				"js/app/beifen/Bottom.js",
+				"html/dynamic/index.lottery.html",
+				"js/app/PaymentFun.js",
+				"html/dynamic/red-packet.html",
+				"css/home/feedback-page.css",
+				"html/dynamic/system.terms.html",
+				"js/ipaynow.js",
+				"html/dynamic/index.userindex.html",
+				"html/dynamic/cart.paysuccess.html",
+				"js/app/beifen/LotteryFun.js",
+				"img/left-sanjiao.png",
+				"js/app/beifen/UserBuyListFun.js",
+				"img/iconfont-fenxiang (1).png",
+				"css/app/register.css",
+				"fonts/iconfont1.ttf",
+				"js/app/beifen/GoodsList.js",
+				"html/dynamic/index.buyrecords.html",
+				"js/easemob.im-1.0.5.js",
+				"js/common.js",
+				"js/app/OrderList.js",
+				"js/app/LotteryDetail.js",
+				"js/mui.poppicker.js",
+				"css/iconfont.css",
+				"html/dynamic/change-password.html",
+				"html/dynamic/index.shaidan.html",
+				"fonts/iconfont.ttf",
+				"img/jiexiaod.png",
+				"js/app/PostListFun.js",
+				"img/c-picture1.png",
+				"html/dynamic/plySuccess.html",
+				"html/dynamic/account.html",
+				"js/app/beifen/LotteryDetail.js",
+				"js/city.data-3.js",
+				"html/dynamic/index.detail.html",
+				"img/f_set.png",
+				"js/app/Bottom.js",
+				"js/app/Comm.js",
+				"img/jiexiao2.png",
+				"html/dynamic/user.recharge.html",
+				"js/app/feedback-page.js",
+				"js/app/userbuylist.js",
+				"img/20141024155813332.jpg",
+				"js/app/beifen/gold-detail.js",
+				"js/app/beifen/user.singlelist.js",
+				"js/app/beifen/user.userbalance.js",
+				"js/app/userindexFun.js",
+				"js/app/consumptionlist.js",
+				"img/clock.gif",
+				"img/ten-bg.png",
+				"css/app2/common.css",
+				"js/share.js",
+				"html/dynamic/control-address.html",
+				"js/app/Cartindex.js",
+				"img/preIcon.png",
+				"js/app/beifen/UserIndex.js",
+				"img/sure-@2x.png",
+				"js/app/AutoLotteryFun.js",
+				"html/dynamic/change_photo.html",
+				"html/dynamic/user.userbalance.html",
+				"img/red-packet.png",
+				"html/dynamic/index.footer.html",
+				"img/sanjiaoxing.png",
+				"js/app/RechargeFun.js",
+				"js/app/beifen/help.js",
+				"js/mui.min.rar",
+				"img/faxian-hon.png",
+				"html/dynamic/my-packet.html",
+				"html/dynamic/discover.html",
+				"html/dynamic/add-address.html",
+				"js/app/beifen/postlist.js",
+				"css/app/help.css",
+				"img/revealed_03.gif",
+				"img/me-hon.png",
+				"img/iconfont-guanbi.png",
+				"img/icon-pinglun.png",
+				"html/dynamic/IWantshaidan.html",
+				"js/app/beifen/recharge.js",
+				"html/dynamic/index.index3.html",
+				"js/app/goodsInfoFun.js",
+				"css/app/userindex.css",
+				"js/app/beifen/RegisterFun.js",
+				"js/app/HelpFun.js",
+				"js/app/beifen/userRegister.js",
+				"css/app/new_announce.css",
+				"html/dynamic/set.html",
+				"js/app/UserBuyListFun.js",
+				"img/home-banner.png",
+				"html/dynamic/index.headertop.html",
+				"html/dynamic/index.Findpossword.html",
+				"img/menu.png",
+				"img/revealed_07.gif",
+				"js/app/beifen/AutoLottery.js",
+				"html/dynamic/system.message.html",
+				"img/shouji.png",
+				"js/app/beifen/changePwd.js",
+				"html/dynamic/index.header.html",
+				"js/mui.picker.js",
+				"js/app/beifen/IndexFun.js",
+				"css/home/mui.picker.min.css",
+				"js/app/BuyRecord.js",
+				"js/app/goodsInfo.js",
+				"css/mui.css",
+				"img/userIco4.png",
+				"html/dynamic/gold-detail.html",
+				"img/iconfont-hongbao.png",
+				"img/jpbg.png",
+				"img/touch-icon.png",
+				"html/dynamic/cart.payment.html",
+				"img/duobao-hui.png",
+				"js/app/LotteryDetailFun.js",
+				"js/app/LoginFun.js",
+				"js/app/userindex.js",
+				"js/app/postlist.js",
+				"img/fifty-bg.png",
+				"img/prefecture.png",
+				"js/app/LotteryFun.js",
+				"html/dynamic/index.index2.html",
+				"js/app/Register.js",
+				"img/card-hui.png",
+				"js/mui.lazyload.img.js",
+				"js/app/MpostList.js",
+				"js/app/help.js",
+				"img/20141024155736176.jpg",
+				"img/iconfont-yaochi.png",
+				"js/app/beifen/BottomFun.js",
+				"html/dynamic/wenzhang.html",
+				"js/app/MpostListFun.js",
+				"js/app/feedback.js",
+				"html/dynamic/UpdateImg.html",
+				"js/app/indexLotteryFun.js",
+				"html/dynamic/Success.html",
+				"html/dynamic/new_file.html",
+				"html/dynamic/user.userbuylist.html",
+				"js/app/GoodsList.js",
+				"js/app/beifen/IWantshaidan.js",
+				"img/shopp.png",
+				"js/app/beifen/jquery190.js",
+				"img/iconfont-fenxian.png",
+				"css/app/AutoLottery.css",
+				"html/dynamic/user.orderlist.html",
+				"css/user-info.css",
+				"img/shoubiao1.png",
+				"js/app/beifen/MobileCheck.js"
+			]
 		}
 	}
 }

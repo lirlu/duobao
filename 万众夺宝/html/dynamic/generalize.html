@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="../../css/app/sign_in.css" />
+	</head>
+	<style type="text/css">
+
+	</style>
+
+	<body style="background-color: #EEEEEE;">
+		<div class="generalize">
+			<div class="inteBox">
+				<div class="flex">
+					累计充值好友返利
+				</div>
+				<div class="flex">
+					<span>
+						10
+					</span>
+				</div>
+			</div>
+			<div class="fiedBox">
+				<div class="flex">
+					<dl>
+						<dt>一级好友</dt>
+						<dd>返利4积分/元好有个数<span>0</span></dd>
+						<dd><span>0</span></dd>
+						<dd>积分</dd>
+					</dl>
+				</div>
+				<div class="flex">
+					<dl>
+						<dt>二级好友</dt>
+						<dd>返利4积分/元好有个数<span>0</span></dd>
+						<dd><span>0</span></dd>
+						<dd>积分</dd>
+					</dl>
+				</div>
+				<div class="flex">
+					<dl>
+						<dt>三级好友</dt>
+						<dd>返利4积分/元好有个数<span>0</span></dd>
+						<dd><span>0</span></dd>
+						<dd>积分</dd>
+					</dl>
+				</div>
+			</div>
+			<div class="moveList">
+				<div class="awardTitle">
+					最新奖励详情
+				</div>
+				<div class="awardBox">
+					<div class="flex">
+						ID
+					</div>
+					<div class="flex">
+						手机号码
+					</div>
+					<div class="flex">
+						充值奖励
+					</div>
+				</div>
+				<div class="awardBox">
+					<div class="flex">
+						ID
+					</div>
+					<div class="flex">
+						手机号码
+					</div>
+					<div class="flex">
+						充值奖励
+					</div>
+				</div>
+			</div>
+
+			<div class="button" id="MyHBao.html" title="推广">邀请好友</div>
+		</div>
+		<script src="../../js/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../../js/mui.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			$(".button").on("click", function() {
+				var Address = this.getAttribute("id");
+				var title = this.getAttribute("title");
+				if (Address) {
+					mui.openWindow({
+						url: "IndexHead.html",
+						id: Address,
+						aniShow: 'pop-in',
+						extras: {
+							Address: Address,
+							wType: 'back',
+							wName: title,
+							winID: plus.webview.currentWebview().id
+						}
+					});
+				} else {
+					plus.nativeUI.toast("正在开发中...");
+				}
+			});
+		</script>
+	</body>
+
+</html>
